@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>三個欄位網頁</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #000;
+            color: #fff;
+            position: relative; /* Add position relative to enable absolute positioning of search */
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            display: flex;
+            justify-content: space-around;
+            align-items: flex-start;
+        }
+
+        .column {
+            flex-basis: 30%;
+            background-color: #222;
+            padding: 20px;
+            margin: 0 10px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            display: flex; /* 添加 Flexbox 佈局 */
+            flex-direction: column; /* 讓內部元素垂直排列 */
+        }
+
+        .column:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        .column img {
+            width: 100%;
+            max-width: 340px;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        .column h2 {
+            font-size: 24px;
+            font-weight: bold;
+            margin-top: 10px;
+            color: #fff;
+        }
+
+        /* 搜索引擎 */
+        .search-container {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+        }
+
+        .search-container input[type=text] {
+            padding: 10px;
+            border-radius: 5px;
+            border: none;
+            width: 200px;
+        }
+
+        .search-container button {
+            padding: 10px 15px;
+            background: #333;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Engine</title>
+    <style>
+        /* Styles for search bar */
+        .search-container {
+            position: fixed; /* Change to fixed to keep it fixed on the screen */
+            top: 20px;
+            right: 20px;
+            z-index: 9999; /* Set a high z-index value */
+        }
+
+        .search-container input[type=text] {
+            padding: 10px;
+            border-radius: 5px;
+            border: none;
+            width: 200px;
+        }
+
+        .search-container button {
+            padding: 10px 15px;
+            background: #333;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .search-container {
+    position: fixed; /* Keep it fixed on the screen */
+    top: 20px;
+    right: 20px;
+    z-index: 9999; /* Set a high z-index value */
+}
+
+.search-container input[type=text] {
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    width: 200px;
+}
+
+.search-container button {
+    padding: 10px 15px;
+    background: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+    </style>
+</head>
+<body>
+    <!-- Search bar -->
+    <div class="search-container">
+        <input id="searchInput" type="text" placeholder="Enter keywords...">
+        <button onclick="searchSimilar()">Search</button>
+    </div>
+
+    <script>
+        function searchSimilar() {
+            // Get the value of the input field
+            var keyword = document.getElementById("searchInput").value;
+            
+            // Replace spaces with '+' for URL compatibility
+            keyword = keyword.replace(/\s+/g, '+');
+            
+            // Redirect the user to a page with similar keywords
+            window.location.href = "https://example.com/search?q=" + keyword;
+        }
+    </script>
+</body>
+</html>
+
+
+    <div class="image-container">
+        <div class="column">
+            <div class="content">
+                <img src="圖片/w644.jpg" alt="圖片1">
+                <h2>宗承歷險記</h2>
+            </div>
+            <p>在這場冒險中，宗承將與我們一起踏上一段驚心動魄的旅程，探索未知的領域，並發現自己內在的力量，
+                在這場充滿冒險和奇蹟的旅程中，宗承將譜寫出一段屬於自己的傳奇，並找到他心中真正的家園。
+            </p>
+        </div>
+        <div class="column">
+            <div class="content">
+                <img src="圖片/螢幕擷取畫面 2024-05-01 224116.png" alt="圖片2">
+                <h2>吳宗承與他的藍皮兵團</h2>
+            </div>
+            <p>在宇宙的深處，一個全新的威脅正在悄悄醞釀，吳宗承，一位出生於遙遠星球的智慧生物，帶領著他的藍皮兵團，踏上了一場前所未有的征途。</p>
+        </div>
+        <div class="column">
+            <div class="content">
+                <img src="圖片/220px-Avatar_2009_movie.jpg" alt="圖片3">
+                <h2>阿凡達：水不知道</h2>
+            </div>
+            <p>錢不夠、演員未定、劇本暫無。</p>
+        </div>
+        <div class="column">
+            <div class="content">
+                <img src="圖片/狼王.jpg" alt="圖片4">
+                <h2>限定角色：狼王</h2>
+            </div>
+            <p>據說他神出鬼沒，但他的電腦似乎壞了。</p>
+        </div>
+        <div class="column">
+            <div class="content">
+                <img src="圖片/香腸.png" alt="圖片5">
+                <h2>阿鬼香腸攤</h2>
+            </div>
+            <p>據說攤主擺攤的地方，雨從來都沒停過。</p>
+        </div>
+        <div class="column">
+            <div class="content">
+                <img src="圖片/統t.png" alt="圖片6">
+                <h2>世仇之爭：畫面還是很亂</h2>
+            </div>
+            <p>據說此二人，現在都很淒慘。</p>
+        </div>
+    </div>
+</body>
+</html>
